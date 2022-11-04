@@ -18,7 +18,6 @@ namespace Formularios
             InitializeComponent();
         }
 
-
         private async void AceptarButton_Click_1(object sender, EventArgs e)
         {
             if (CodigoUsuarioTextBox.Text == String.Empty)
