@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,50 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
+        }
+
+
+        private async void AceptarButton_Click_1(object sender, EventArgs e)
+        {
+            if (CodigoUsuarioTextBox.Text == String.Empty)
+            {
+                errorProvider1.SetError(CodigoUsuarioTextBox, "Ingrese un código de usuario");
+                CodigoUsuarioTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (ClaveTextBox.Text == String.Empty)
+            {
+                errorProvider1.SetError(ClaveTextBox, "Ingrese una clave");
+                ClaveTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            UsuarioDatos userDatos = new UsuarioDatos();
+
+            bool valido = await userDatos.LoginAsync(CodigoUsuarioTextBox.Text, ClaveTextBox.Text);
+
+            if (valido)
+            {
+                Menu formulario = new Menu();          
+                Hide();
+                formulario.Show();
+            }
+            else
+            {
+                MessageBox.Show("Datos de usuario incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CancelarButton_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
