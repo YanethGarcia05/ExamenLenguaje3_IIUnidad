@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="CadenaConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoporteDatos.cs" />
     <Compile Include="UsuarioDatos.cs" />
   </ItemGroup>
   <ItemGroup>

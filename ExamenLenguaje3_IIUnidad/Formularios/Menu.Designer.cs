@@ -33,13 +33,18 @@
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.UsuariosToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.tabbedMDIManager1 = new Syncfusion.Windows.Forms.Tools.TabbedMDIManager(this.components);
+            this.ProductosToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.UsuariosToolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.TipoSoporteToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
             this.toolStripEx1.SuspendLayout();
+            this.toolStripTabItem2.Panel.SuspendLayout();
+            this.toolStripEx2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControlAdv1
@@ -65,7 +70,7 @@
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem2;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(481, 100);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -108,21 +113,13 @@
             this.toolStripEx1.Size = new System.Drawing.Size(81, 34);
             this.toolStripEx1.TabIndex = 0;
             // 
-            // UsuariosToolStripButton1
-            // 
-            this.UsuariosToolStripButton1.Image = global::Formularios.Properties.Resources.usuario;
-            this.UsuariosToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.UsuariosToolStripButton1.Name = "UsuariosToolStripButton1";
-            this.UsuariosToolStripButton1.Size = new System.Drawing.Size(72, 17);
-            this.UsuariosToolStripButton1.Text = "Usuarios";
-            this.UsuariosToolStripButton1.Click += new System.EventHandler(this.UsuariosToolStripButton1_Click);
-            // 
             // toolStripTabItem2
             // 
             this.toolStripTabItem2.Name = "toolStripTabItem2";
             // 
             // ribbonControlAdv1.ribbonPanel2
             // 
+            this.toolStripTabItem2.Panel.Controls.Add(this.toolStripEx2);
             this.toolStripTabItem2.Panel.Name = "ribbonPanel2";
             this.toolStripTabItem2.Panel.ScrollPosition = 0;
             this.toolStripTabItem2.Panel.TabIndex = 3;
@@ -144,6 +141,51 @@
             this.tabbedMDIManager1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererOffice2010);
             this.tabbedMDIManager1.ThemeName = "TabRendererOffice2010";
             // 
+            // ProductosToolStripButton
+            // 
+            this.ProductosToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ProductosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ProductosToolStripButton.Name = "ProductosToolStripButton";
+            this.ProductosToolStripButton.Size = new System.Drawing.Size(71, 22);
+            this.ProductosToolStripButton.Text = "Productos";
+            this.ProductosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripEx2
+            // 
+            this.toolStripEx2.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx2.Image = null;
+            this.toolStripEx2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TipoSoporteToolStripButton1});
+            this.toolStripEx2.Location = new System.Drawing.Point(0, 1);
+            this.toolStripEx2.Name = "toolStripEx2";
+            this.toolStripEx2.Office12Mode = false;
+            this.toolStripEx2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.toolStripEx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripEx2.Size = new System.Drawing.Size(150, 34);
+            this.toolStripEx2.TabIndex = 0;
+            // 
+            // UsuariosToolStripButton1
+            // 
+            this.UsuariosToolStripButton1.Image = global::Formularios.Properties.Resources.usuario;
+            this.UsuariosToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UsuariosToolStripButton1.Name = "UsuariosToolStripButton1";
+            this.UsuariosToolStripButton1.Size = new System.Drawing.Size(72, 17);
+            this.UsuariosToolStripButton1.Text = "Usuarios";
+            this.UsuariosToolStripButton1.Click += new System.EventHandler(this.UsuariosToolStripButton1_Click);
+            // 
+            // TipoSoporteToolStripButton1
+            // 
+            this.TipoSoporteToolStripButton1.Image = global::Formularios.Properties.Resources.soporte_tecnico1;
+            this.TipoSoporteToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TipoSoporteToolStripButton1.Name = "TipoSoporteToolStripButton1";
+            this.TipoSoporteToolStripButton1.Size = new System.Drawing.Size(110, 17);
+            this.TipoSoporteToolStripButton1.Text = "Tipo de Soporte";
+            this.TipoSoporteToolStripButton1.Click += new System.EventHandler(this.TipoSoporteToolStripButton1_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +203,10 @@
             this.toolStripTabItem1.Panel.PerformLayout();
             this.toolStripEx1.ResumeLayout(false);
             this.toolStripEx1.PerformLayout();
+            this.toolStripTabItem2.Panel.ResumeLayout(false);
+            this.toolStripTabItem2.Panel.PerformLayout();
+            this.toolStripEx2.ResumeLayout(false);
+            this.toolStripEx2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -173,5 +219,8 @@
         private System.Windows.Forms.ToolStripButton UsuariosToolStripButton1;
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem2;
         private Syncfusion.Windows.Forms.Tools.TabbedMDIManager tabbedMDIManager1;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx2;
+        private System.Windows.Forms.ToolStripButton TipoSoporteToolStripButton1;
+        private System.Windows.Forms.ToolStripButton ProductosToolStripButton;
     }
 }

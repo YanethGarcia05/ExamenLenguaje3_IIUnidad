@@ -17,6 +17,7 @@ namespace Formularios
             InitializeComponent();
         }
         UsuariosForm _usuariosForm = null;
+        TipoSoporteForm _soporteForm = null;
 
         private void UsuariosToolStripButton1_Click(object sender, EventArgs e)
         {
@@ -36,6 +37,26 @@ namespace Formularios
         private void _usuariosForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _usuariosForm = null;
+        }
+
+        private void TipoSoporteToolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (_soporteForm == null)
+            {
+                _soporteForm = new TipoSoporteForm();
+                _soporteForm.MdiParent = this;
+                _soporteForm.FormClosed += _soporteForm_FormClosed;
+                _soporteForm.Show();
+            }
+            else
+            {
+                _soporteForm.Activate();
+            }
+        }
+
+        private void _soporteForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _usuariosForm=null;
         }
     }
 }

@@ -74,11 +74,11 @@
     <Compile Include="Tickets.Designer.cs">
       <DependentUpon>Tickets.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tipos.cs">
+    <Compile Include="TipoSoporteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tipos.Designer.cs">
-      <DependentUpon>Tipos.cs</DependentUpon>
+    <Compile Include="TipoSoporteForm.Designer.cs">
+      <DependentUpon>TipoSoporteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuariosForm.cs">
       <SubType>Form</SubType>
@@ -102,6 +102,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TipoSoporteForm.resx">
+      <DependentUpon>TipoSoporteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuariosForm.resx">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +133,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soporte-tecnico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soporte-tecnico1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
