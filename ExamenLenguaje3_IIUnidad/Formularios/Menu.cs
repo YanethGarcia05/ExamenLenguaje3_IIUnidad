@@ -18,6 +18,7 @@ namespace Formularios
         }
         UsuariosForm _usuariosForm = null;
         TipoSoporteForm _soporteForm = null;
+        TicketsForm _tickets=null;
 
         private void UsuariosToolStripButton1_Click(object sender, EventArgs e)
         {
@@ -57,6 +58,21 @@ namespace Formularios
         private void _soporteForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _usuariosForm=null;
+        }
+
+        private void FacturaToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (_tickets == null)
+            {
+                _tickets = new TicketsForm();
+                _tickets.MdiParent = this;
+                _tickets.FormClosed += _soporteForm_FormClosed;
+                _tickets.Show();
+            }
+            else
+            {
+                _tickets.Activate();
+            }
         }
     }
 }

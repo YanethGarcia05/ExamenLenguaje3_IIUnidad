@@ -102,7 +102,7 @@ namespace Datos
                     using (MySqlCommand comando = new MySqlCommand(sql, _conexion))
                     {
                         comando.CommandType = System.Data.CommandType.Text;
-                        comando.Parameters.Add("@Codigo", MySqlDbType.Int32).Value = codigo;
+                        comando.Parameters.Add("@Codigo", MySqlDbType.VarChar,50).Value = codigo;
                         await comando.ExecuteNonQueryAsync();
                         elimino = true;
                     }
@@ -112,6 +112,36 @@ namespace Datos
             {
             }
             return elimino;
+        }
+
+        public async Task<Soporte> GetPorCodigoAsync(int codigo)
+        {
+            Soporte soporte = new Soporte();
+            try
+            {
+                string sql = "SELECT * FROM soporte WHERE Codigo=@Codigo;";
+
+                using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
+                {
+                    await _conexion.OpenAsync();
+                    using (MySqlCommand comando = new MySqlCommand(sql, _conexion))
+                    {
+                        comando.CommandType = System.Data.CommandType.Text;
+                        comando.Parameters.Add("@Codigo", MySqlDbType.Int32).Value = codigo;
+
+                        MySqlDataReader dr = (MySqlDataReader)await comando.ExecuteReaderAsync();
+                        if (dr.Read())
+                        {
+                            soporte.Codigo = Convert.ToInt32(dr["Codigo"]);
+                            soporte.TipoSoporte = dr["TipoSoporte"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            return soporte;
         }
 
     }

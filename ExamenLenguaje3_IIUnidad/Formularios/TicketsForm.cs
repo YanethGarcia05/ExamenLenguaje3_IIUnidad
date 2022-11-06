@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
-    public partial class Tickets : Form
+    public partial class TicketsForm : Form
     {
-        public Tickets()
+        public TicketsForm()
         {
             InitializeComponent();
         }

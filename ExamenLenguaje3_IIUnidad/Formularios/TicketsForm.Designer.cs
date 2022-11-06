@@ -1,6 +1,6 @@
 ﻿namespace Formularios
 {
-    partial class Tickets
+    partial class TicketsForm
     {
         /// <summary>
         /// Required designer variable.
